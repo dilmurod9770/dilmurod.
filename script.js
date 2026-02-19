@@ -1,16 +1,25 @@
-var text = prompt("So'z yozin");
+var input = prompt("Sonni yozen");
+var data = input.split(" ");
+var a = Number(data[0]);
+var amal = data[1];
+var b = Number(data[2]);
+var son;
 
-
-var harf = prompt(" harf yozin");
-
-var count = 0;
-
-
-for (var i = 0; i < text.length; i++) {
-  if (text[i] == harf) {
-    count++;
-  }
+switch (amal) {
+  case "+":
+   son = a + b;
+    break;
+  case "-":
+    son = a - b;
+    break;
+  case "*":
+    son = a * b;
+    break;
+  case "/":
+    son = a / b;
+    break;
+  default:
+    son = "Noto`g`ri amal";
 }
 
-console.log(alert(`${text} harfi ${count} ta`));
-console.log( $(text) `suzida`, $(harf) `ta bor`);
+alert(son);
